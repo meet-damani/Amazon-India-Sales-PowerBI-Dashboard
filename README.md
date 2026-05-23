@@ -37,26 +37,6 @@ The dataset consists of **6 columns** capturing product and order-level sales in
 | `Shipment` | Number of shipments made |
 | `Order Date` | Date the order was placed |
 
----
-
-## 🛠️ Data Preparation
-
-### Date Table (DAX)
-A custom Date Table was created to enable time-intelligence functions:
-
-```dax
-Date Table = CALENDAR(MIN(Amazon_Data[Order Date]), MAX(Amazon_Data[Order Date]))
-```
-
-**Calculated columns added to the Date Table:**
-
-| Column | Purpose |
-|---|---|
-| Month Name | Display month labels on visuals |
-| Month Number | Sort months chronologically |
-| Week | Weekly aggregation |
-| Quarter Number | Numeric quarter for sorting |
-| Quarter | Quarter label (e.g., Q1, Q2) |
 
 ### Relationship
 A **one-to-many** relationship was established between:
